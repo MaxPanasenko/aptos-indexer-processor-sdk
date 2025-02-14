@@ -43,21 +43,21 @@ impl TransactionStreamConfig {
     /// Indexer GRPC http2 ping interval in seconds. Defaults to 30.
     /// Tonic ref: https://docs.rs/tonic/latest/tonic/transport/channel/struct.Endpoint.html#method.http2_keep_alive_interval
     pub const fn default_indexer_grpc_http2_ping_interval() -> u64 {
-        300
+        200
     }
 
     /// Indexer GRPC http2 ping timeout in seconds. Defaults to 10.
     pub const fn default_indexer_grpc_http2_ping_timeout() -> u64 {
-        1000
+        500
     }
 
     /// Default timeout for establishing a grpc connection. Defaults to 5 seconds.
     pub const fn default_indexer_grpc_reconnection_timeout() -> u64 {
-        2000
+        500
     }
 
     /// Default timeout for receiving an item from grpc stream. Defaults to 60 seconds.
     pub const fn default_indexer_grpc_response_item_timeout() -> u64 {
-        2000
+        600
     }
 }

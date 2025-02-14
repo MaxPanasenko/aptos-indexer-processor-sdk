@@ -29,15 +29,15 @@ impl TransactionStreamConfig {
     }
 
     pub const fn indexer_grpc_http2_ping_timeout(&self) -> Duration {
-        Duration::from_secs(self.indexer_grpc_http2_ping_timeout_secs)
+        Duration::from_millis(self.indexer_grpc_http2_ping_timeout_secs)
     }
 
     pub const fn indexer_grpc_reconnection_timeout(&self) -> Duration {
-        Duration::from_secs(self.indexer_grpc_reconnection_timeout_secs)
+        Duration::from_millis(self.indexer_grpc_reconnection_timeout_secs)
     }
 
     pub const fn indexer_grpc_response_item_timeout(&self) -> Duration {
-        Duration::from_secs(self.indexer_grpc_response_item_timeout_secs)
+        Duration::from_millis(self.indexer_grpc_response_item_timeout_secs)
     }
 
     /// Indexer GRPC http2 ping interval in seconds. Defaults to 30.
@@ -48,12 +48,12 @@ impl TransactionStreamConfig {
 
     /// Indexer GRPC http2 ping timeout in seconds. Defaults to 10.
     pub const fn default_indexer_grpc_http2_ping_timeout() -> u64 {
-        10
+        100
     }
 
     /// Default timeout for establishing a grpc connection. Defaults to 5 seconds.
     pub const fn default_indexer_grpc_reconnection_timeout() -> u64 {
-        5
+        50
     }
 
     /// Default timeout for receiving an item from grpc stream. Defaults to 60 seconds.

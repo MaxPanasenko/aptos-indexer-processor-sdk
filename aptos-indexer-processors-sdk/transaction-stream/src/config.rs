@@ -25,7 +25,7 @@ pub struct TransactionStreamConfig {
 
 impl TransactionStreamConfig {
     pub const fn indexer_grpc_http2_ping_interval(&self) -> Duration {
-        Duration::from_secs(self.indexer_grpc_http2_ping_interval_secs)
+        Duration::from_millis(self.indexer_grpc_http2_ping_interval_secs)
     }
 
     pub const fn indexer_grpc_http2_ping_timeout(&self) -> Duration {

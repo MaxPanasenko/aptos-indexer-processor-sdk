@@ -332,7 +332,7 @@ impl TransactionStream {
             last_fetched_version: transaction_stream_config
                 .starting_version
                 .map(|v| v as i64 - 1),
-            fetch_ma: MovingAverage::new(3000),
+            fetch_ma: MovingAverage::new(1000),
         })
     }
 
